@@ -1,0 +1,149 @@
+:root {
+    /* Praimary Colors */
+    --purple-700: hsl(257, 40%, 49%);
+    --magenta-400: hsl(300, 69%, 71%);
+    --fff-color: #fff;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    margin-left: 15px;
+    margin-right: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+body {
+    background-image: url('/images/bg-desktop.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: var(--purple-700);
+    font-family: 'Open Sans', 'Poppins', sans-serif;
+    font-weight: 400;
+}
+
+@media (max-width:768px) {
+    body {
+        background-image: url('/images/bg-mobile.svg')
+    }
+}
+
+header {
+    padding: 30px 0;
+}
+
+/* Landing */
+.landing {
+    margin: 50px auto;
+}
+
+.landing .sections {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+@media (max-width:768px) {
+    .landing .sections {
+        flex-direction: column;
+    }
+}
+
+.landing .sections .text {
+    color: var(--fff-color);
+}
+
+@media (max-width:768px) {
+    .landing .sections .text {
+        text-align: center;
+    }
+}
+
+.landing .sections .text h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    margin-bottom: 35px;
+    font-size: 33px;
+    line-height: 1.4
+}
+
+.landing .sections .main-text {
+    line-height: 1.5;
+    font-weight: 400;
+    margin: 0
+}
+
+.landing .sections .imgs img {
+    max-width: 460px;
+}
+
+@media (max-width:500px) {
+    .landing .sections .imgs img {
+        max-width: 260px;
+    }
+
+    .logo img {
+        width: 200px;
+    }
+}
+
+.landing button {
+    color: var(--purple-700);
+    border: none;
+    padding: 15px 30px;
+    background-color: var(--fff-color);
+    border-radius: 33px;
+    box-shadow: 0 0 10px 0 #00000078;
+    transition: .2s;
+    margin: 20px auto;
+    font-size: 14px;
+    cursor: pointer
+}
+
+.landing button:hover {
+    background-color: var(--magenta-400);
+    color: var(--fff-color)
+}
+
+.landing .icons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    align-items: center;
+    margin-top: 20px;
+}
+
+@media (max-width:768px) {
+    .landing .icons {
+        justify-content: center;
+    }
+}
+
+.landing .icons a {
+    border: 2px solid var(--fff-color);
+    border-radius: 50%;
+    padding: 8px;
+    transition: .2s;
+}
+
+.landing .icons a:hover {
+    border: 2px solid var(--magenta-400);
+}
+
+.landing .icons a:hover i {
+    color: var(--magenta-400);
+}
+
+.landing .icons i {
+    font-size: 20px;
+    color: var(--fff-color);
+    transition: .2s;
+}
+
+/* Landing //*/
